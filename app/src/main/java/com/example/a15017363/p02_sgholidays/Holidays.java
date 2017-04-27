@@ -40,11 +40,20 @@ public class Holidays extends AppCompatActivity {
         tvHolidayType.setText(type);
 
         if(type.equals("Secular")){
-            holidays.add(new Holiday("New Year's Day","1 Jan 2017"));
-            holidays.add(new Holiday("Labour Day","1 May 2017"));
+            holidays.add(new Holiday("New Year's Day","1 Jan 2017","newyear"));
+            holidays.add(new Holiday("Labour Day","1 May 2017","labourday"));
+            holidays.add(new Holiday("National Day","9 Aug 2017","nationalday"));
+
         }else{
-            holidays.add(new Holiday("Chinese New Year","28-29 Jan 2017"));
-            holidays.add(new Holiday("Good Friday","14 April 2017"));
+            holidays.add(new Holiday("Chinese New Year","28-29 Jan 2017","cny"));
+            holidays.add(new Holiday("Good Friday","14 April 2017","goodfriday"));
+            holidays.add(new Holiday("Vesak Day","10 May 2017","vesakday"));
+            holidays.add(new Holiday("Hari Raya Puasa","25 June 2017","harirayapuasa"));
+            holidays.add(new Holiday("Hari Raya Haji","1 Sept 2017","harirayahaji"));
+            holidays.add(new Holiday("Deepavali","18 Oct 2017","deepavali"));
+            holidays.add(new Holiday("Christmas Day" ,"25 Dec 2017","christmas"));
+
+
         }
 
         lvHolidays.setOnItemClickListener(new AdapterView.OnItemClickListener() {

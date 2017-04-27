@@ -1,6 +1,7 @@
 package com.example.a15017363.p02_sgholidays;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,16 +56,19 @@ public class HolidayAdaptor extends ArrayAdapter<Holiday> {
 
         tvDay.setText(currentHol.getName());
         tvDate.setText(currentHol.getDate());
+        String img = currentHol.getImg();
+        int hol = this.context.getResources().getIdentifier(img, "drawable", context.getPackageName());
+        ivHoliday.setImageResource(hol);
         //Set the image to star or nostar accordingly
-        if(currentHol.getName().equals("Chinese New Year")) {
-            ivHoliday.setImageResource(R.drawable.cny);
-        }else if(currentHol.getName().equals("New Year's Day")){
-            ivHoliday.setImageResource(R.drawable.newyear);
-        }else if(currentHol.getName().equals("Labour Day")){
-            ivHoliday.setImageResource(R.drawable.labourday);
-        } else {
-            ivHoliday.setImageResource(R.drawable.goodfriday);
-        }
+//        if(currentHol.getName().equals("Chinese New Year")) {
+//            ivHoliday.setImageResource(R.drawable.cny);
+//        }else if(currentHol.getName().equals("New Year's Day")){
+//            ivHoliday.setImageResource(R.drawable.newyear);
+//        }else if(currentHol.getName().equals("Labour Day")){
+//            ivHoliday.setImageResource(R.drawable.labourday);
+//        } else {
+//            ivHoliday.setImageResource(R.drawable.goodfriday);
+//        }
         // Return the nicely done up View to the ListView
         return rowView;
     }

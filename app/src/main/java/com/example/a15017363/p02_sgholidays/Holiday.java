@@ -8,15 +8,21 @@ public class Holiday {
 
     private String holidayName;
     private String holidayDate;
+    private String imgName;
 
-    public Holiday(String holidayName,String holidayDate){
+    public Holiday(String holidayName,String holidayDate, String imgName){
         this.holidayName = holidayName;
         this.holidayDate = holidayDate;
+        this.imgName = imgName;
+
     }
     public String getName(){
         return holidayName;
     }
     public String getDate(){
         return holidayDate;
+    }
+    public String getImg(){
+        return imgName;
     }
 }
